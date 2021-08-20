@@ -1,6 +1,10 @@
-const calculadora = require ('./calculadora');
+const { createPublicKey } = require('crypto');
+const http = require('http');
+// console.log(http);
 
-console.log('soma:'+ calculadora.soma(1,2));
-console.log('subtr:' + calculadora.subt(5,3));
-console.log('mult:' + calculadora.mult(3,5));
-console.log ('div:')+  calculadora.div(10,2);
+
+http.createServer(function(req,res){
+    res.end('<h1>ola</h1>');
+}).listen(3000);  //  voce que indica a porta que vc deseja usar 
+
+console.log('Meu servidor esta rodando');
